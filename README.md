@@ -20,6 +20,8 @@ Choose `Telegent-0.1.0-beta.4-build70-macOS-arm64.zip`. Extract it, move Telegen
 
 Hosted AI is an invite beta: Howard must enable your verified numeric Telegram user ID. Native Telegram login alone does not grant AI access. No provider key or development server is required. If activation says beta access is required, request enrollment; reinstalling will not enable access.
 
+To find your numeric ID for enrollment, open the [Telegram identity check](https://consumer-ai-beta.up.railway.app/auth/telegram/login), authorize Telegram, and send the displayed ID to Howard. This check does not activate AI or read your chats.
+
 First activation uses an additional browser authorization because the AI backend verifies Telegram identity independently. The activation credential is saved on your Mac; renewed authorization can be required after expiry, sign-out or an account change.
 
 ## Beta scope
