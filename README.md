@@ -1,35 +1,39 @@
-# Telegent · Releases & feedback
+# Telegent · Downloads & feedback
 
-Telegent is a macOS Telegram client with a private Agent discussion space. Discuss an idea beside a chat, choose its background, and share the discussion and context you want someone else to understand.
+Telegent adds an Agent discussion space beside your Telegram chats. Discuss an idea with its recent chat context, keep Agent history on your Mac, and share selected discussion snapshots through a browser link.
 
-This repository is the public home for downloads, release notes and feedback.
+## Download Build 70
 
-## Download status
+[**Download the Apple Silicon beta**](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.4)
 
-**The first Apple Silicon beta is being prepared. No public installer is available yet.**
+Choose `Telegent-0.1.0-beta.4-build70-macOS-arm64.zip`. Extract it, move Telegent.app to Applications, and open it. Quit an older Telegent before replacing it; keep your existing app data.
 
-The candidate has passed Developer ID signing and Apple notarization. Corresponding source preparation and clean-device onboarding, Agent replies and sharing acceptance are still pending. Notarization alone does not verify those product flows.
+- Apple Silicon only. No Intel build.
+- Confirmed on an Apple Silicon Mac mini running macOS 26.2: Telegram login and a real Agent reply. Earlier macOS versions are not yet validated.
+- Developer ID signed and Apple notarized. Checksums and the matching client source are attached to the release.
 
-Published installers will appear on the [Releases page](https://github.com/howardpen9/telegent-releases/releases). GitHub's automatically generated “Source code” archives contain this repository's documentation; they are not the Telegent installer or the complete application source.
+## Start using Agent Chat
 
-## First beta
+1. Sign into your own Telegram account in Telegent.
+2. For your first AI activation, open Intents → Settings → Continue with Telegram. Authorize the **same Telegram account** in the browser.
+3. Open Agent Chat beside a conversation or create one in Intents. Send a question and wait for the reply.
 
-- Apple Silicon Macs only. Intel is not supported in this first beta.
-- The supported macOS versions will be stated after device acceptance.
-- Sign in with your Telegram account. First AI activation currently also requires Telegram authorization in a browser.
-- Hosted AI access is limited to enabled beta accounts. A successful Telegram login does not automatically enable AI access.
-- No personal AI provider key or local development server is required for the hosted beta.
+Hosted AI is an invite beta: Howard must enable your verified numeric Telegram user ID. Native Telegram login alone does not grant AI access. No provider key or development server is required. If activation says beta access is required, request enrollment; reinstalling will not enable access.
+
+First activation uses an additional browser authorization because the AI backend verifies Telegram identity independently. The activation credential is saved on your Mac; renewed authorization can be required after expiry, sign-out or an account change.
+
+## Beta scope
+
+Build 70 fixes a search keyboard loop that could block sidebar rendering, and includes the earlier first-launch and Telegram Layer223 sync repairs. Mac mini login and Agent replies are confirmed. QR scanning and +888 delivery need further checks; phone-number login is the current tested path. Cold-start timing, DM/topic context accuracy, continuation after restart and phone-recipient sharing remain part of the friend trial, rather than completed acceptance claims.
 
 ## Feedback
 
-[Report a bug](https://github.com/howardpen9/telegent-releases/issues/new/choose) or suggest an improvement through Issues. Include the app build, macOS version, the steps you took and what you expected.
-
-Public issues are visible to everyone. Do not attach API keys, login codes, private messages or unredacted screenshots. For vulnerabilities, use private reporting from the repository's [Security tab](https://github.com/howardpen9/telegent-releases/security), once available.
+[Report a bug](https://github.com/howardpen9/telegent-releases/issues/new/choose). Include build 70, macOS version, steps, expected result and actual result. Public issues are visible to everyone: omit login codes, API keys and private conversation text. Use the repository's Security reporting options for vulnerabilities when available.
 
 ## Data and source
 
-Agent history and manual Memories are stored on your Mac. Hosted AI processes your submitted question, recent Agent history and any included context through the AI service and its configured provider. Shared links contain the snapshots you choose to publish; anyone with the link can read them. Cloud sharing is separate from full-history or Memory synchronization.
+Agent history and manual Memories stay on your Mac. Hosted AI processes submitted questions, recent Agent history and included context through the configured provider. Cloud shares are selected snapshots readable by anyone with the link; they are separate from full-history or Memory synchronization.
 
-See [Privacy](PRIVACY.md) and [Source availability](SOURCE.md). Telegent is derived from [TelegramSwift](https://github.com/overtake/TelegramSwift) under the [GNU GPL version 2](LICENSE). Each published binary release must provide its corresponding client source and required notices.
+See [Privacy](PRIVACY.md) and [Source availability](SOURCE.md). The release contains a separate **build70-source.tar.gz** with native changes, dependency sources/notices and build instructions. GitHub's automatic “Source code” archives contain this documentation repository only. A complete fresh standalone source build remains unverified; the published binary was built from the integrated native checkout.
 
-Telegent is an independent project, not an official Telegram release.
+Telegent derives from [TelegramSwift](https://github.com/overtake/TelegramSwift), with its [GNU GPL v2 license](LICENSE) preserved. It is an independent project, not an official Telegram release.
