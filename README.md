@@ -2,22 +2,23 @@
 
 Telegent adds an Agent discussion space beside your Telegram chats. Discuss an idea with its recent chat context, keep Agent history on your Mac, and share selected discussion snapshots through a browser link.
 
-## Download Build 73
+## Download Build 73 · repaired Beta 5.1 installer
 
-[**Download the Apple Silicon beta**](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5)
+[**Download the Apple Silicon beta**](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5.1)
 
 | Version | Use |
 | --- | --- |
-| [Beta5 / Build73](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5) | **Current friend beta — start here** |
+| [Beta5.1 / Build73](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5.1) | **Current friend beta — start here** |
+| [Beta5 / Build73](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5) | Superseded ZIP packaging; use Beta5.1 for installation |
 | [Beta4 / Build70](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.4) | Previous beta, retained for rollback |
 
 Older unpublished candidates are labeled **Archived draft**. Repository maintainers may see those drafts before published releases; friends see only the public versions. Share the Build73 link above to open the current version directly.
 
-Choose `Telegent-0.1.0-beta.5-build73-macOS-arm64.zip`. Extract it, move Telegent.app to Applications, and open it. Quit an older Telegent before replacing it; keep your existing app data.
+Choose `Telegent-0.1.0-beta.5.1-build73-macOS-arm64-repack1.zip`. Extract it, move Telegent.app to Applications, and open it. Quit an older Telegent before replacing it; keep your existing app data.
 
 - Apple Silicon only. No Intel build.
 - Build70 Telegram login and a real Agent reply were confirmed on an Apple Silicon Mac mini running macOS 26.2. Build73 includes new UI fixes with automated checks; installation and the complete updated flow still need friend testing. Earlier macOS versions remain unvalidated.
-- Developer ID signed and Apple notarized. Checksums and the matching client source are attached to the release.
+- Developer ID signed and Apple notarized. Beta5.1 repairs archive metadata placement after ZIP extraction; App code remains Build73. Strict signature, ticket and Gatekeeper checks passed after native unpack on macOS26.2 with simulated quarantine; normal-browser first-open on the affected macOS15.6.1 recipient remains pending. Checksums and links to unchanged matching client source/notices are on the release page.
 
 ## Start using Agent Chat
 
@@ -45,6 +46,6 @@ See the [10–15 minute friend test checklist](TESTING.md).
 
 Agent history and manual Memories stay on your Mac. Hosted AI processes submitted questions, recent Agent history and included context through the configured provider. Cloud shares are selected snapshots readable by anyone with the link; they are separate from full-history or Memory synchronization.
 
-See [Privacy](PRIVACY.md) and [Source availability](SOURCE.md). The release contains a separate **build73-source.tar.gz** with native changes, dependency sources/notices and build instructions. GitHub's automatic “Source code” archives contain this documentation repository only. A complete fresh standalone source build remains unverified; the published binary was built from the integrated native checkout.
+See [Privacy](PRIVACY.md) and [Source availability](SOURCE.md). The [Beta5 release](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5) contains the unchanged separate **build73-source.tar.gz** with native changes, dependency sources/notices and build instructions. GitHub's automatic “Source code” archives contain this documentation repository only. A complete fresh standalone source build remains unverified; the published binary was built from the integrated native checkout.
 
 Telegent derives from [TelegramSwift](https://github.com/overtake/TelegramSwift), with its [GNU GPL v2 license](LICENSE) preserved. It is an independent project, not an official Telegram release.
