@@ -6,6 +6,13 @@ Telegent adds an Agent discussion space beside your Telegram chats. Discuss an i
 
 [**Download the Apple Silicon beta**](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5)
 
+| Version | Use |
+| --- | --- |
+| [Beta5 / Build73](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.5) | **Current friend beta — start here** |
+| [Beta4 / Build70](https://github.com/howardpen9/telegent-releases/releases/tag/v0.1.0-beta.4) | Previous beta, retained for rollback |
+
+Older unpublished candidates are labeled **Archived draft**. Repository maintainers may see those drafts before published releases; friends see only the public versions. Share the Build73 link above to open the current version directly.
+
 Choose `Telegent-0.1.0-beta.5-build73-macOS-arm64.zip`. Extract it, move Telegent.app to Applications, and open it. Quit an older Telegent before replacing it; keep your existing app data.
 
 - Apple Silicon only. No Intel build.
